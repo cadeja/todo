@@ -21,21 +21,87 @@
 /* BASE STYLES
 /*******************************************/
 
-body {
 
+:root {
+  --colordark: #435D56;
+  --colorlight: #F1F2EE;
 }
 
+html {
+  font-size: 18px;
+}
+
+body {
+  background: #1f2926;
+  color: var(--colorlight)
+}
+
+header,
+footer {
+  background-color: #111;
+}
+
+.tasklist,
+.task-config {
+  background-color: var(--colordark);
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
+  height: 80px;
+}
 
+main {
+  min-height: calc(100vh - 130px);
 }
 
 footer {
-
+  height: 50px;
 }
+
+main,
+header,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+header,
+footer {
+  align-items: center;
+}
+
+main > section {
+  margin: 20px;
+  padding: 20px;
+}
+
+.tasklist {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tasklist h2,
+.tasklist ul {
+  align-self: center;
+}
+
+.task-config {
+  width: 400px;
+}
+
 
 /******************************************
 /* ADDITIONAL STYLES
